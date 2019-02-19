@@ -24,6 +24,5 @@ containers:
          name: data
    ports:
        - exposedPort: 1880
-       - exposedPort: 3130
    memory-limit: "512M"
    memoryLimit: "512M"
