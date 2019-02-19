@@ -20,7 +20,7 @@ containers:
    image: nodered/node-red-docker:v8
    env: []
    volumes:
-       - mountPath: "/data
+       - mountPath: "/data"
          name: data
    ports:
        - exposedPort: 1880
