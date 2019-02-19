@@ -1,0 +1,29 @@
+version: 1.0.0
+type: Che Editor
+name: node-red
+id: org.eclipse.che.editor.node-red
+title: Node-RED for Eclipse Che
+description: Eclipse Theia
+icon: https://nodered.org/about/resources/media/node-red-hexagon.svg
+endpoints:
+ -  name: "ws"
+    public: true
+    targetPort: 1880
+    attributes:
+      protocol: http
+      type: ide
+      secure: true
+      cookiesAuthEnabled: true
+      discoverable: false
+containers:
+ - name: node-red
+   image: nodered/node-red-docker:v8
+   env: []
+   volumes:
+       - mountPath: "/data
+         name: data
+   ports:
+       - exposedPort: 1880
+       - exposedPort: 3130
+   memory-limit: "512M"
+   memoryLimit: "512M"
